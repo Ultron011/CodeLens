@@ -1,7 +1,7 @@
 import os
 import pytest
 import sys
-from codelens.scanner import CodeScanner, run_cli
+from codelens.scanner import CodeScanner
 
 def test_list_files_ignore_hidden_dirs(tmp_path):
     d = tmp_path / "project"
