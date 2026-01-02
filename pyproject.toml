@@ -1,0 +1,16 @@
+[project]
+name = "codelens"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=9.0.2",
+    "rich>=14.2.0",
+]
+
+[project.scripts]
+codelens = "codelens.scanner:run_cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
