@@ -8,7 +8,7 @@ dependencies = [
 ]
 
 [project.scripts]
-codelens = "codelens.scanner:run_cli"
+codelens = "codelens.main:run_cli"
 
 [build-system]
 requires = ["hatchling"]
