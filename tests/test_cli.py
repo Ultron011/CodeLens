@@ -1,5 +1,5 @@
 import pytest
-from codelens.core.scanner import run_cli
+from codelens.main import run_cli
 import sys
 
 def test_cli_scan_command_parsing(monkeypatch):

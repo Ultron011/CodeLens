@@ -14,11 +14,13 @@ class CodeParser:
                 chunks.append(ast.get_source_segment(content, node))
                 
             elif isinstance(node, ast.ClassDef):
+                # Capture the entire class definition
+                chunks.append(ast.get_source_segment(content, node))
+                
+                # Also capture individual methods with class context
                 for sub_node in node.body:
                     if isinstance(sub_node, (ast.FunctionDef, ast.AsyncFunctionDef)):
-                        chunks.append(ast.get_source_segment(content, sub_node))
-                        
-                class_meta = f"Class: {node.name}"
-                chunks.append(class_meta)
+                        method_code = ast.get_source_segment(content, sub_node)
+                        chunks.append(f"Class: {node.name}\n{method_code}")
                     
         return chunks if chunks else [content]

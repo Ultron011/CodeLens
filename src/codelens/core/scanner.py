@@ -3,7 +3,7 @@ from pathlib import Path
 class CodeScanner:
     def __init__(self, root_dir: str, ignore_list=None):
         self.root_dir = Path(root_dir)
-        self.ignore_list = ignore_list or {'.git', '__pycache__', "node_modules", '.venv', '.pytest_cache'}
+        self.ignore_list = ignore_list or {'.git', '__pycache__', "node_modules", '.venv', '.pytest_cache', '.codelens_db'}
         
     def get_all_files(self):
         found_files = []

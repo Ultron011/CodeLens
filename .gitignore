@@ -153,3 +153,4 @@ cython_debug/
 ._*
 Thumbs.db
 desktop.ini
+.codelens_db
